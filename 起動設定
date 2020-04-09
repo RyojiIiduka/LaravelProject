@@ -1,0 +1,2 @@
+php -S localhost:3333 -t public
+http://localhost:3333
