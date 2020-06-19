@@ -19,4 +19,15 @@ class RecordController extends Controller
         $result = Book::where('publisher','日経BP')->get();
         return view('hello.list', ['records' => $result]);
     }
+
+    public function hasmany() {
+        $book = Book::find(1);
+        //print_r ($book);
+        //echo 'はずめにい';
+        return view(
+            'record.hasmany',[
+                'book' => $book,
+            ]);
+    }
+
 }

@@ -43,3 +43,21 @@ Route::get('state/cookie', 'StateController@Cookie');
 
 Route::get('record/find', 'RecordController@find');
 Route::get('record/where', 'RecordController@where');
+Route::get('record/hasmany', 'RecordController@hasmany');
+
+Route::get('save/create', 'SaveController@create');
+Route::post('save/store', 'SaveController@store');
+
+Route::get('save/{id}/edit', 'SaveController@edit');
+Route::patch('save/{id}', 'SaveController@update');
+Route::get('save/{id}', 'SaveController@show');
+Route::delete('save/{id}', 'SaveController@destroy');
+
+//vue.jsの学習用
+Route::get('vue/top', 'VueController@top');
+Route::get('vue/method', 'VueController@method');
+Route::get('vue/form', 'VueController@form');
+Route::get('vue/com', 'VueController@com');
+
+//麻雀筋トレ用
+Route::get('jang', 'JangController@index');

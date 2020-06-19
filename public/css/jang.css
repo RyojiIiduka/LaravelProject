@@ -1,0 +1,45 @@
+.jang-field ul li{
+    display: inline;
+}
+
+body:before {
+    content:
+    url("../image/man1.gif") 
+    url("../image/man2.gif")
+    url("../image/man3.gif")
+    url("../image/man4.gif")
+    url("../image/man5.gif")
+    url("../image/man6.gif")
+    url("../image/man7.gif")
+    url("../image/man8.gif")
+    url("../image/man9.gif")
+    url("../image/pin1.gif") 
+    url("../image/pin2.gif")
+    url("../image/pin3.gif")
+    url("../image/pin4.gif")
+    url("../image/pin5.gif")
+    url("../image/pin6.gif")
+    url("../image/pin7.gif")
+    url("../image/pin8.gif")
+    url("../image/pin9.gif")
+    url("../image/so1.gif") 
+    url("../image/so2.gif")
+    url("../image/so3.gif")
+    url("../image/so4.gif")
+    url("../image/so5.gif")
+    url("../image/so6.gif")
+    url("../image/so7.gif")
+    url("../image/so8.gif")
+    url("../image/so9.gif")
+    url("../image/so9.gif")
+    ;
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.active {
+    background: #777474;
+}
