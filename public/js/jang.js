@@ -3,6 +3,8 @@ new Vue({
     data: {
         isActive: true,
         items:[],
+        ten: false,
+        thi: false,
         show: false,
         man: false,
         so: false,
@@ -15,11 +17,21 @@ new Vue({
         display: function () {
             let errorWord = '';
             let selectedType = this.countType();
+            let selectedNumber = this.countNumber();
             if (selectedType.length !== 2) {
                 errorWord = '牌の種類を２つ選択してね。';
             }
             if (this.countLevel() !== 1) {
                 errorWord = errorWord + 'レベルは一つ選択してね。';
+            }
+            if (selectedNumber !== 1) {
+                errorWord = errorWord + '枚数を選択してね。';
+            } else {
+                if (this.ten) {
+                    number = 10;
+                } else if (this.thi) {
+                    number = 13;
+                }
             }
             if (errorWord === '' ) {
                 this.items = [];
@@ -31,7 +43,7 @@ new Vue({
                 } else if (this.low) {
                     array.push(2,2,2,2,8,8,8,8,1,1,1,1,9,9,9,9);
                 }
-                for (let j = 0; j < 5 ; j++) {
+                for (let j = 0; j < number ; j++) {
                     //ランダムに添え字を返す
                     fetchedItem = Math.floor(Math.random() * array.length);
                     temp = 'image/man' + array[fetchedItem] + '.gif';
@@ -123,6 +135,26 @@ new Vue({
                 count++;
             }
             return count;
+        },
+        countNumber: function () {
+            let count = 0;
+            if (this.ten) {
+                count++;
+            }
+            if (this.thi) {
+                count++;
+            }
+            return count;
+        },
+        setNumber: function (number) {
+            if (number === 10) {
+                this.ten = true;
+                this.thi = false;
+            }
+            if (number === 13) {
+                this.ten = false;
+                this.thi = true;
+            }
         }
     }
 });

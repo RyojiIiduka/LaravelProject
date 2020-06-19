@@ -8,6 +8,8 @@
     <body>
     <div id="app" v-cloak>
         <!-- バインディング、exmidlowがtrueならクラスにactive付与 -->
+        <button v-bind:class="{active: ten}" v-on:click="setNumber(10)">10枚</button>
+        <button v-bind:class="{active: thi}" v-on:click="setNumber(13)">13枚</button>
         <button v-bind:class="{active: man}" v-on:click="selectType('man')">萬子</button>
         <button v-bind:class="{active: so}" v-on:click="selectType('so')">索子</button>
         <button v-bind:class="{active: pin}" v-on:click="selectType('pin')">筒子</button>
